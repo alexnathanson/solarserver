@@ -10,9 +10,9 @@ Solar Server!
 <?php
 
 //variables
-$pvVoltsNow = "";
-$pvCurrentNow = "";
-$pvPowerNow = "";
+$pvVoltsNow = 3;
+$pvCurrentNow = .33;
+$pvPowerNow = 1;
 
 $dataNow = array($pvVoltsNow, $pvCurrentNow, $pvPowerNow);
 
