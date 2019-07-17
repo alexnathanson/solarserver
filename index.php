@@ -43,7 +43,7 @@ var_dump($rawDataArray);
 echo "</pre>";
 
 //also from https://phpenthusiast.com/blog/parse-csv-with-php
-$build = '<table><thead><th>item 1</th><th>item 2</th><th>item 3</th></thead><tbody>';
+$build = '<table>';
 foreach($rawDataArray as $row)
 {
 $build .= '<tr>';
@@ -53,7 +53,7 @@ $build .= "<td>{$item}</td>";
 }
 $build .= '</tr>';
 }
-$build .= '</tbody></table>';
+$build .= '</table>';
 echo $build;
 ?>
 
