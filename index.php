@@ -37,10 +37,12 @@ if (($h = fopen("{$fileName}", "r")) !== FALSE)
   fclose($h);
 }
 
+/*
 // Display the code in a readable format
 echo "<pre>";
 var_dump($rawDataArray);
 echo "</pre>";
+*/
 
 //also from https://phpenthusiast.com/blog/parse-csv-with-php
 $build = '<table border=1px>';
