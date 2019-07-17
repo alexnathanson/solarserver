@@ -14,7 +14,7 @@ Solar Server!
 echo getcwd() . "\n";
 
 //get the data
-$file = fopen(".home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv","r");
+$file = fopen("/home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv","r");
 print_r(fgetcsv($file));
 fclose($file);
 
@@ -27,6 +27,7 @@ $dataNow = array($pvVoltsNow, $pvCurrentNow, $pvPowerNow);
 
 echo date("Y-m-d") . "<br>";
 
+echo "file name: /home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv <br>"
 echo "<h3>Present PV Data: </h3>" . json_encode($dataNow);
 
 ?>
