@@ -22,14 +22,7 @@ echo "<h3>File name:</h3>". $fileName . "<br>";
 
 echo "<h3>PV Data:</h3>";
 
-/*
-//get the data
-$file = fopen($fileName,"r");
-print_r(fgetcsv($file));
-fclose($file);
-*/
-
-// Open the file for reading
+// Open the file for reading (from https://phpenthusiast.com/blog/parse-csv-with-php)
 if (($h = fopen("{$fileName}", "r")) !== FALSE) 
 {
   // Each line in the file is converted into an individual array that we call $data
@@ -49,7 +42,19 @@ echo "<pre>";
 var_dump($rawDataArray);
 echo "</pre>";
 
-
+//also from https://phpenthusiast.com/blog/parse-csv-with-php
+$build = '<table><thead><th>item 1</th><th>item 2</th><th>item 3</th></thead><tbody>';
+foreach($rawDataArray as $row)
+{
+$build .= '<tr>';
+foreach($row as $item)
+{
+$build .= "<td>{$item}</td>";
+}
+$build .= '</tr>';
+}
+$build .= '</tbody></table>';
+echo $build;
 ?>
 
 </body>
