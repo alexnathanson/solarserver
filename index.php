@@ -27,7 +27,8 @@ $dataNow = array($pvVoltsNow, $pvCurrentNow, $pvPowerNow);
 
 echo date("Y-m-d") . "<br>";
 
-echo "file name: /home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv <br>"
+echo "file name: /home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv <br>";
+
 echo "<h3>Present PV Data: </h3>" . json_encode($dataNow);
 
 ?>
