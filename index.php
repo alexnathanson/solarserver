@@ -16,7 +16,8 @@ $pvPowerNow = 1;
 
 $dataNow = array($pvVoltsNow, $pvCurrentNow, $pvPowerNow);
 
-echo $dataNow;
+echo json_encode($dataNow);
+
 ?>
 
 </body>
