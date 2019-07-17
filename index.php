@@ -9,8 +9,12 @@ Solar Server!
 
 <?php
 
+
+// current directory
+echo getcwd() . "\n";
+
 //get the data
-$file = fopen("data/tracerData" . date("Y-m-d") . ".csv","r");
+$file = fopen(".home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv","r");
 print_r(fgetcsv($file));
 fclose($file);
 
