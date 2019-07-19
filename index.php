@@ -13,9 +13,9 @@
 $fileName = "/home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv";
 $rawDataArray = [];
 
-echo "<h3>Today's date:</h3>" . date("Y-m-d") . "<br>";
+echo "<h3>Today's Date:</h3>" . date("Y-m-d") . "<br>";
 
-echo "<h3>File name:</h3>". $fileName . "<br>";
+echo "<h3>File Name:</h3>". $fileName . "<br>";
 
 // current directory
 //echo getcwd() . "\n";
@@ -44,7 +44,7 @@ var_dump($rawDataArray);
 echo "</pre>";
 */
 
-echo "<h4>Now:</h4>";
+echo "<h4>Most Recent Data:</h4>";
 $buildNow = '<table border=1px>';
 //foreach($rawDataArray as $row)
 
