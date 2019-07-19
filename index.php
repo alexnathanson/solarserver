@@ -47,10 +47,12 @@ echo "</pre>";
 echo "<h4>Now:</h4>";
 $buildNow = '<table border=1px>';
 //foreach($rawDataArray as $row)
-$dataCount = count(rawDataArray);
+$dataCount = count($rawDataArray);
+$nowRow = $rawDataArray[$dataCount-1];
+
 {
 $buildNow .= '<tr>';
-foreach($rawDataArray[$dataCount-1] as $item)
+foreach($nowRow as $item)
 {
 $buildNow .= "<td>{$item}</td>";
 }
