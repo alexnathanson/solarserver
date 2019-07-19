@@ -47,6 +47,18 @@ echo "</pre>";
 echo "<h4>Now:</h4>";
 $buildNow = '<table border=1px>';
 //foreach($rawDataArray as $row)
+
+//header
+{
+$buildNow .= '<tr>';
+foreach($rawDataArray[0] as $item)
+{
+$buildNow .= "<td>{$item}</td>";
+}
+$buildNow .= '</tr>';
+}
+
+//most recent data
 $dataCount = count($rawDataArray);
 $nowRow = $rawDataArray[$dataCount-1];
 
