@@ -44,6 +44,23 @@ var_dump($rawDataArray);
 echo "</pre>";
 */
 
+echo "<h4>Now:</h4>";
+$build = '<table border=1px>';
+//foreach($rawDataArray as $row)
+$dataCount = count(rawDataArray);
+{
+$build .= '<tr>';
+foreach($rawDataArray[dataCount-1] as $item)
+{
+$build .= "<td>{$item}</td>";
+}
+$build .= '</tr>';
+}
+$build .= '</table>';
+echo $build;
+
+
+echo "<h4>Today:</h4>";
 //also from https://phpenthusiast.com/blog/parse-csv-with-php
 $build = '<table border=1px>';
 foreach($rawDataArray as $row)
