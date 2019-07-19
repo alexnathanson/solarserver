@@ -45,19 +45,19 @@ echo "</pre>";
 */
 
 echo "<h4>Now:</h4>";
-$build = '<table border=1px>';
+$buildNow = '<table border=1px>';
 //foreach($rawDataArray as $row)
 $dataCount = count(rawDataArray);
 {
-$build .= '<tr>';
-foreach($rawDataArray[dataCount-1] as $item)
+$buildNow .= '<tr>';
+foreach($rawDataArray[$dataCount-1] as $item)
 {
-$build .= "<td>{$item}</td>";
+$buildNow .= "<td>{$item}</td>";
 }
-$build .= '</tr>';
+$buildNow .= '</tr>';
 }
-$build .= '</table>';
-echo $build;
+$buildNow .= '</table>';
+echo $buildNow;
 
 
 echo "<h4>Today:</h4>";
