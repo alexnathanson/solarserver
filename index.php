@@ -94,8 +94,18 @@ echo "<h4>Today:</h4>";
 	    return val.slice(10,(val.length-1));
 		});
 
-      //drop headers
-      mapData = mapData.slice(1,(mapData.length-1));
+      //set x axis
+      var useAsX = mapData.length-1; //the column number you want to use
+
+      var rowLength = mapData[0].length-1;
+
+      //go through each row
+      for (var i = 0; i < mapData.length; i++) {
+      	//send the first column to the back until the selected column is first
+      	for (var c=0; c < useAsX;c++){
+		 	mapData[i][rowLength] = mapData[i].shift();
+      		}
+		}
 
       //make floats
       for (var i = 1; i < mapData.length; i++) {
