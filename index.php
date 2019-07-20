@@ -89,12 +89,24 @@ echo "<h4>Today:</h4>";
 
       var phpData = <?php echo json_encode($rawDataArray) ?>;
 
+      //select columns
+      var mapData = phpData.map(function(val){
+	    return val.slice(0,2);
+		});
 
-	var mapData = array.map(function(val){
-	    return phpData.slice(9,9);
-	});
+      //drop headers
+      mapData = mapData.slice(1,(mapData.length-1));
 
-	console.log(mapData); // [[a,b],[a,b],[a,b]]
+      //make floats
+      for (var i = 0; i < phpData.length; i++) {
+      	for (var c=0; c <phpData[i].length;c++){
+		 	phpData[i][c] = parseFloat(phpData[i][c]);
+      		}
+		}
+
+
+	
+
       console.log(mapData);
 
       function drawChart() {
