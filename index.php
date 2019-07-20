@@ -84,33 +84,32 @@ echo "<h4>Today:</h4>";
 ?>
 
 <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['corechart', 'line']});
       google.charts.setOnLoadCallback(drawChart);
 
       var phpData = <?php echo json_encode($rawDataArray) ?>;
 
       //select columns
       var mapData = phpData.map(function(val){
-	    return val.slice(0,2);
+	    return val.slice(10,(val.length-1));
 		});
 
       //drop headers
       mapData = mapData.slice(1,(mapData.length-1));
 
       //make floats
-      for (var i = 0; i < phpData.length; i++) {
-      	for (var c=0; c <phpData[i].length;c++){
-		 	phpData[i][c] = parseFloat(phpData[i][c]);
+      for (var i = 1; i < mapData.length; i++) {
+      	for (var c=0; c <mapData[i].length;c++){
+		 	mapData[i][c] = parseFloat(mapData[i][c]);
       		}
 		}
-
-
-	
 
       console.log(mapData);
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable(phpData);
+        var data = google.visualization.arrayToDataTable(mapData);
+
+        //console.log(data);
 
         var options = {
           title: 'PV system',
