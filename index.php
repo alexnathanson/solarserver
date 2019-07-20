@@ -91,11 +91,11 @@ echo "<h4>Today:</h4>";
 
       //select columns
       var mapData = phpData.map(function(val){
-	    return val.slice(10,(val.length-1));
+	    return val.slice(10,(val.length));
 		});
 
       //set x axis
-      var useAsX = mapData.length-1; //the column number you want to use
+      var useAsX = mapData[0].length-1; //the column number you want to use
 
       var rowLength = mapData[0].length-1;
 
@@ -107,9 +107,9 @@ echo "<h4>Today:</h4>";
       		}
 		}
 
-      //make floats
+      //make floats, exclude header and X-axis
       for (var i = 1; i < mapData.length; i++) {
-      	for (var c=0; c <mapData[i].length;c++){
+      	for (var c=1; c <mapData[i].length;c++){
 		 	mapData[i][c] = parseFloat(mapData[i][c]);
       		}
 		}
