@@ -87,10 +87,16 @@ echo "<h4>Today:</h4>";
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
-      var phpData = "<?php echo $rawDataArray ?>";
+      var phpData = <?php echo json_encode($rawDataArray) ?>;
 
-      console.log(phpData);
-      
+
+	var mapData = array.map(function(val){
+	    return phpData.slice(9,9);
+	});
+
+	console.log(mapData); // [[a,b],[a,b],[a,b]]
+      console.log(mapData);
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable(phpData);
 
