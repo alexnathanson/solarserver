@@ -90,15 +90,22 @@ echo "<h4>Today:</h4>";
       var phpData = <?php echo json_encode($rawDataArray) ?>;
 
       //select columns
+      //this only works for taking a contiguous subset
       var mapData = phpData.map(function(val){
 	    return val.slice(10,(val.length));
 		});
 
+      //go through each row
+      for (var i = 0; i < mapData.length; i++) {
+      	//send the first column to the back until the selected column is first
+      	for (var c=0; c < useAsX;c++){
+		 	mapData[i][rowLength] = mapData[i].shift();
+      		}
+		}
+
       //set x axis
       var useAsX = mapData[0].length-1; //the column number you want to use
-
       var rowLength = mapData[0].length-1;
-
       //go through each row
       for (var i = 0; i < mapData.length; i++) {
       	//send the first column to the back until the selected column is first
@@ -121,19 +128,47 @@ echo "<h4>Today:</h4>";
 
         //console.log(data);
 
-        var options = {
-          title: 'PV system',
+        var PVoptions = {
+          title: 'PV',
           curveType: 'function',
-          legend: { position: 'bottom' }
+          legend: { position: 'bottom' },
+          width: 500,
+        	height: 700
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var BAToptions = {
+          title: 'Battery',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          width: 500,
+        	height: 700
+        };
 
-        chart.draw(data, options);
+        var LOADoptions = {
+          title: 'Load',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          width: 500,
+        	height: 700
+        };
+
+        var PVchart = new google.visualization.LineChart(document.getElementById('PV_chart'));
+
+        PVchart.draw(data, PVoptions);
+
+        var BATchart = new google.visualization.LineChart(document.getElementById('BAT_chart'));
+
+        BATchart.draw(data, BAToptions);
+
+        var LOADchart = new google.visualization.LineChart(document.getElementById('LOAD_chart'));
+
+        LOADchart.draw(data, LOADoptions);
     }
 </script>
 
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+<div id="PV_chart" style="width: 500px; height: 700px"></div>
+<div id="BAT_chart" style="width: 500px; height: 700px"></div>
+<div id="LOAD_chart" style="width: 500px; height: 700px"></div>
 
 <?php
 //also from https://phpenthusiast.com/blog/parse-csv-with-php
