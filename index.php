@@ -91,10 +91,12 @@ echo "<h4>Today:</h4>";
 
       
 //PV DATA
-	var PV_Data = cleanData(phpData, 1, 10, -1)
+	var pvData = cleanData(phpData, 1, 10, -1);
 //BAT DATA
+	var batData = cleanData(phpData, 1, 10, -1);
 
 //LOAD DATA
+	var loadData = cleanData(phpData, 1, 10, -1);
 
 	//select columns
       //this only works for taking a contiguous subset
