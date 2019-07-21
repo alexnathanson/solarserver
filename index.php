@@ -89,42 +89,62 @@ echo "<h4>Today:</h4>";
 
       var phpData = <?php echo json_encode($rawDataArray) ?>;
 
-      //select columns
-      //this only works for taking a contiguous subset
-      var mapData = phpData.map(function(val){
-	    return val.slice(10,(val.length));
-		});
+      
+//PV DATA
+	var PV_Data = cleanData(phpData, 1, 10, -1)
+//BAT DATA
 
-      //go through each row
-      for (var i = 0; i < mapData.length; i++) {
+//LOAD DATA
+
+	//select columns
+      //this only works for taking a contiguous subset
+      //var mapData = phpData.map(function(val){
+	  //  return val.slice(10,(val.length));
+		//});
+
+      function cleanData(thisArray, _useAsX, subsetStart, subsetFinish){
+
+      	var tempData = thisArray.map(function(val){
+	    	return val.slice(subsetStart,subsetFinish);
+			});
+
+		//go through each row
+      	for (var i = 0; i < tempData.length; i++) {
       	//send the first column to the back until the selected column is first
       	for (var c=0; c < useAsX;c++){
-		 	mapData[i][rowLength] = mapData[i].shift();
+		 	tempData[i][rowLength] = tempData[i].shift();
       		}
 		}
 
       //set x axis
-      var useAsX = mapData[0].length-1; //the column number you want to use
-      var rowLength = mapData[0].length-1;
+      var useAsX = tempData[0].length-1; //the column number you want to use
+     
+      var rowLength = tempData[0].length-1;
       //go through each row
-      for (var i = 0; i < mapData.length; i++) {
+      for (var i = 0; i < tempData.length; i++) {
       	//send the first column to the back until the selected column is first
       	for (var c=0; c < useAsX;c++){
-		 	mapData[i][rowLength] = mapData[i].shift();
+		 	tempData[i][rowLength] = tempData[i].shift();
       		}
 		}
 
       //make floats, exclude header and X-axis
-      for (var i = 1; i < mapData.length; i++) {
-      	for (var c=1; c <mapData[i].length;c++){
-		 	mapData[i][c] = parseFloat(mapData[i][c]);
+      for (var i = 1; i < tempData.length; i++) {
+      	for (var c=1; c < tempData[i].length;c++){
+		 	tempData[i][c] = parseFloat(tempData[i][c]);
       		}
 		}
 
-      console.log(mapData);
+      console.log(tempData);
+
+      return tempData;
+      }
+      
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable(mapData);
+        var PVdataMap = google.visualization.arrayToDataTable(pvData);
+        var BATdataMap = google.visualization.arrayToDataTable(batData);
+        var LOADdataMap = google.visualization.arrayToDataTable(loadData);
 
         //console.log(data);
 
@@ -154,21 +174,21 @@ echo "<h4>Today:</h4>";
 
         var PVchart = new google.visualization.LineChart(document.getElementById('PV_chart'));
 
-        PVchart.draw(data, PVoptions);
+        PVchart.draw(PVdataMap, PVoptions);
 
         var BATchart = new google.visualization.LineChart(document.getElementById('BAT_chart'));
 
-        BATchart.draw(data, BAToptions);
+        BATchart.draw(BATdataMap, BAToptions);
 
         var LOADchart = new google.visualization.LineChart(document.getElementById('LOAD_chart'));
 
-        LOADchart.draw(data, LOADoptions);
+        LOADchart.draw(LOADdataMap, LOADoptions);
     }
 </script>
 
-<div id="PV_chart" style="width: 500px; height: 700px"></div>
-<div id="BAT_chart" style="width: 500px; height: 700px"></div>
-<div id="LOAD_chart" style="width: 500px; height: 700px"></div>
+<div id="PV_chart" style="width: 1500px; height: 700px"></div>
+<div id="BAT_chart" style="width: 1500px; height: 700px"></div>
+<div id="LOAD_chart" style="width: 1500px; height: 700px"></div>
 
 <?php
 //also from https://phpenthusiast.com/blog/parse-csv-with-php
