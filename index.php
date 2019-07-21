@@ -91,12 +91,12 @@ echo "<h4>Today:</h4>";
 
       
 //PV DATA
-	var pvData = cleanData(phpData, 1, 10, -1);
+	var pvData = cleanData(phpData, 1, 0, 3);
 //BAT DATA
-	var batData = cleanData(phpData, 1, 10, -1);
+	var batData = cleanData(phpData, 1, 4,8);
 
 //LOAD DATA
-	var loadData = cleanData(phpData, 1, 10, -1);
+	var loadData = cleanData(phpData, 1, 10, 0);
 
 	//select columns
       //this only works for taking a contiguous subset
@@ -154,24 +154,24 @@ echo "<h4>Today:</h4>";
           title: 'PV',
           curveType: 'function',
           legend: { position: 'bottom' },
-          width: 500,
-        	height: 700
+          width: 1500,
+        	height: 400
         };
 
         var BAToptions = {
           title: 'Battery',
           curveType: 'function',
           legend: { position: 'bottom' },
-          width: 500,
-        	height: 700
+          width: 1500,
+        	height: 400
         };
 
         var LOADoptions = {
           title: 'Load',
           curveType: 'function',
           legend: { position: 'bottom' },
-          width: 500,
-        	height: 700
+          width: 1500,
+        	height: 400
         };
 
         var PVchart = new google.visualization.LineChart(document.getElementById('PV_chart'));
