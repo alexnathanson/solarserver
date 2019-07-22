@@ -95,21 +95,21 @@ echo "<h4>Today:</h4>";
       }
       
 //PV DATA
-	var pvData = phpData.slice();
-
+	var pvData = JSON.parse(JSON.stringify(phpData));
+/*
 	for (var sp = 0; sp < pvData.length;sp++){
-		pvData[sp].splice(10,4);//remove columns 10-13
+		pvData[sp].splice(10,3);//remove columns 10-13
 		pvData[sp].splice(4,5);//remove colums 4-8
 	}
 	
-
+*/
 	console.log(pvData);
 	pvData = cleanData(pvData, "date");
 //BAT DATA
-	var batData = cleanData(phpData, 1, 4,8);
+	var batData = cleanData(phpData, "data");
 
 //LOAD DATA
-	var loadData = cleanData(phpData, 1, 10, 14);
+	var loadData = cleanData(phpData, "date");
 
 	//select columns
       //this only works for taking a contiguous subset
