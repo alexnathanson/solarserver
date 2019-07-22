@@ -134,8 +134,8 @@ echo "<h4>Today:</h4>";
 		//go through each row
       	for (var i = 0; i < tempData.length; i++) {
       	//send the first column to the back until the selected column is first
-	      	for (var c=0; c <= useAsX;c++){
-			 	tempData[i][rowLength] = tempData[i].shift();
+	      	for (var c=0; c < useAsX;c++){
+			 	tempData[i][tempData[i].length-1] = tempData[i].shift();
 	      		}
 		}
 
@@ -164,7 +164,7 @@ echo "<h4>Today:</h4>";
           curveType: 'function',
           legend: { position: 'bottom' },
           width: 1500,
-        	height: 400
+        	height: 900
         };
 
         var BAToptions = {
@@ -197,7 +197,7 @@ echo "<h4>Today:</h4>";
     }
 </script>
 
-<div id="PV_chart" style="width: 1500px; height: 700px"></div>
+<div id="PV_chart" style="width: 1500px; height: 900px"></div>
 <div id="BAT_chart" style="width: 1500px; height: 700px"></div>
 <div id="LOAD_chart" style="width: 1500px; height: 700px"></div>
 
