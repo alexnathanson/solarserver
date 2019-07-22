@@ -139,18 +139,6 @@ echo "<h4>Today:</h4>";
 	      		}
 		}
 
-      //set x axis
-      var useAsX = tempData[0].length-1; //the column number you want to use
-     
-      var rowLength = tempData[0].length-1;
-      //go through each row
-      for (var i = 0; i < tempData.length; i++) {
-      	//send the first column to the back until the selected column is first
-      	for (var c=0; c < useAsX;c++){
-		 	tempData[i][rowLength] = tempData[i].shift();
-      		}
-		}
-
       //make floats, exclude header and X-axis
       for (var i = 1; i < tempData.length; i++) {
       	for (var c=1; c < tempData[i].length;c++){
