@@ -95,7 +95,7 @@ echo "<h4>Today:</h4>";
       }
       
 //PV DATA
-	var pvData = JSON.parse(JSON.stringify(phpData));
+	//var pvData = JSON.parse(JSON.stringify(phpData));
 /*
 	for (var sp = 0; sp < pvData.length;sp++){
 		pvData[sp].splice(10,3);//remove columns 10-13
@@ -103,8 +103,8 @@ echo "<h4>Today:</h4>";
 	}
 	
 */
-	console.log(pvData);
-	pvData = cleanData(pvData, "date");
+	//console.log(pvData);
+	var pvData = cleanData(phpData, "date");
 //BAT DATA
 	var batData = cleanData(phpData, "data");
 
@@ -127,14 +127,14 @@ echo "<h4>Today:</h4>";
       	for (var getX = 0; getX < tempData[0].length; getX++){
       		if (tempData[0][getX] == stringForX){
       			useAsX = getX;
-      			console.log(useAsX);
+      			console.log(stringForX + " " + useAsX);
       			break;
       		}
       	}
 		//go through each row
       	for (var i = 0; i < tempData.length; i++) {
       	//send the first column to the back until the selected column is first
-	      	for (var c=0; c < useAsX;c++){
+	      	for (var c=0; c <= useAsX;c++){
 			 	tempData[i][rowLength] = tempData[i].shift();
 	      		}
 		}
