@@ -119,13 +119,15 @@ echo "<h4>Today:</h4>";
 
       function cleanData(tempData, stringForX){
 
-      	
+      	console.log(tempData[0]) //print headers
+
       	//Set X axis
       	var useAsX = 0;
       	//find string in first row
       	for (var getX = 0; getX < tempData[0].length; getX++){
       		if (tempData[0][getX] == stringForX){
       			useAsX = getX;
+      			console.log(useAsX);
       			break;
       		}
       	}
