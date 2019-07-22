@@ -89,14 +89,20 @@ echo "<h4>Today:</h4>";
 
       var phpData = <?php echo json_encode($rawDataArray) ?>;
 
-      
+      //remove the time column from the end
+      phpData.pop();
 //PV DATA
-	var pvData = cleanData(phpData, 1, 0, 3);
+	var pvData = phpData;
+
+	pvData.splice(10,4);//remove columns 10-13
+	pvData.splice(4,5);//remove colums 4-8
+
+	pvData = cleanData(pvData, "date");
 //BAT DATA
 	var batData = cleanData(phpData, 1, 4,8);
 
 //LOAD DATA
-	var loadData = cleanData(phpData, 1, 10, 0);
+	var loadData = cleanData(phpData, 1, 10, 14);
 
 	//select columns
       //this only works for taking a contiguous subset
@@ -104,18 +110,24 @@ echo "<h4>Today:</h4>";
 	  //  return val.slice(10,(val.length));
 		//});
 
-      function cleanData(thisArray, _useAsX, subsetStart, subsetFinish){
+      function cleanData(tempData, stringForX){
 
-      	var tempData = thisArray.map(function(val){
-	    	return val.slice(subsetStart,subsetFinish);
-			});
-
+      	thisArray.splice()
+      	//Set X axis
+      	var useAsX = 0;
+      	//find string in first row
+      	for (var getX = 0; getX < tempData[0].length, getX++){
+      		if (tempData[0][getX] == stringForX){
+      			useAsX = getX;
+      			break;
+      		}
+      	}
 		//go through each row
       	for (var i = 0; i < tempData.length; i++) {
       	//send the first column to the back until the selected column is first
-      	for (var c=0; c < useAsX;c++){
-		 	tempData[i][rowLength] = tempData[i].shift();
-      		}
+	      	for (var c=0; c < useAsX;c++){
+			 	tempData[i][rowLength] = tempData[i].shift();
+	      		}
 		}
 
       //set x axis
