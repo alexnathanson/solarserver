@@ -90,13 +90,20 @@ echo "<h4>Today:</h4>";
       var phpData = <?php echo json_encode($rawDataArray) ?>;
 
       //remove the time column from the end
-      phpData.pop();
+      for (var p =0; p <phpData.length; p++){
+      	phpData[p].pop();
+      }
+      
 //PV DATA
-	var pvData = phpData;
+	var pvData = phpData.slice();
 
-	pvData.splice(10,4);//remove columns 10-13
-	pvData.splice(4,5);//remove colums 4-8
+	for (var sp = 0; sp < pvData.length;sp++){
+		pvData[sp].splice(10,4);//remove columns 10-13
+		pvData[sp].splice(4,5);//remove colums 4-8
+	}
+	
 
+	console.log(pvData);
 	pvData = cleanData(pvData, "date");
 //BAT DATA
 	var batData = cleanData(phpData, 1, 4,8);
@@ -112,11 +119,11 @@ echo "<h4>Today:</h4>";
 
       function cleanData(tempData, stringForX){
 
-      	thisArray.splice()
+      	
       	//Set X axis
       	var useAsX = 0;
       	//find string in first row
-      	for (var getX = 0; getX < tempData[0].length, getX++){
+      	for (var getX = 0; getX < tempData[0].length; getX++){
       		if (tempData[0][getX] == stringForX){
       			useAsX = getX;
       			break;
@@ -149,7 +156,7 @@ echo "<h4>Today:</h4>";
       		}
 		}
 
-      console.log(tempData);
+      //console.log(tempData);
 
       return tempData;
       }
