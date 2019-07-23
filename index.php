@@ -190,24 +190,24 @@ echo "<h4>Today:</h4>";
           title: 'PV',
           curveType: 'function',
           legend: { position: 'bottom' },
-          width: 1200,
-        	height: 600
+          width: 1500,
+        	height: 500
         };
 
         var BAToptions = {
           title: 'Battery',
           curveType: 'function',
           legend: { position: 'bottom' },
-          width: 1200,
-        	height: 600
+          width: 1500,
+        	height: 500
         };
 
         var LOADoptions = {
           title: 'Load',
           curveType: 'function',
           legend: { position: 'bottom' },
-          width: 1200,
-        	height: 600
+          width: 1500,
+        	height: 500
         };
 
         var PVchart = new google.visualization.LineChart(document.getElementById('PV_chart'));
@@ -226,9 +226,9 @@ echo "<h4>Today:</h4>";
     
 </script>
 
-<div id="PV_chart" style="width: 1200px; height: 600px"></div>
-<div id="BAT_chart" style="width: 1200px; height: 600px"></div>
-<div id="LOAD_chart" style="width: 1200px; height: 600px"></div>
+<div id="PV_chart" style="width: 1500px; height: 500px"></div>
+<div id="BAT_chart" style="width: 1500px; height: 500px"></div>
+<div id="LOAD_chart" style="width: 1500px; height: 500px"></div>
 
 <?php
 //also from https://phpenthusiast.com/blog/parse-csv-with-php
