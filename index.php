@@ -131,8 +131,8 @@ echo "<h4>Today:</h4>";
 	}
 	
 	//scale bat percentage to 0-100
-	for (var bper = 0; bper < batData.length;bper++){
-		batData[bper][1]=batData[bper][1] * 100;
+	for (var bper = 0; bper < batData.length; bper++){
+		batData[bper][1] *= 100.0;
 	}
 
 //LOAD DATA
