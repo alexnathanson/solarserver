@@ -110,22 +110,35 @@ echo "<h4>Today:</h4>";
 */
 	var pvData = cleanData(phpData.clone(), "date");
 
+	//remember this happens AFTER the columns are shuffled around!
 	for (var sp = 0; sp < pvData.length;sp++){
-		pvData[sp].splice(10,3);//remove columns 10-13
-		pvData[sp].splice(4,5);//remove colums 4-8
+		pvData[sp].splice(1,3);//remove columns
+		pvData[sp].splice(8);//remove colums
 	}
 	
-	console.log(pvData);
+	//console.log(pvData);
 
 //BAT DATA
 	//var batData = phpData.slice(4,6);
 
 	var batData = cleanData(phpData.clone(), "data");
 
+	//remember this happens AFTER the columns are shuffled around!
+	for (var sp = 0; sp < batData.length;sp++){
+		batData[sp].splice(1,7);//remove columns
+		//batData[sp].splice(8);//remove colums
+	}
+	
+
 //LOAD DATA
 	//var loadData = phpData.slice(9);//if only 1 element it goes to the end
 	var loadData = cleanData(phpData.clone(), "date");
 
+	//remember this happens AFTER the columns are shuffled around!
+	for (var sp = 0; sp < loadData.length;sp++){
+		loadData[sp].splice(4);//remove columns
+		//batData[sp].splice(8);//remove colums
+	}
 	//select columns
       //this only works for taking a contiguous subset
       //var mapData = phpData.map(function(val){
