@@ -16,12 +16,10 @@
 //get the query string
 $date = htmlspecialchars($_GET["date"]);
 
-echo $date;
-
 $fileDate = date("Y-m-d");
-if ( = 'yesterday'){
+if ( $date = 'yesterday'){
 	$fileDate = date("Y-m-") . (date(d)-1);
-}elseif( = 'before'){
+}elseif( $date = 'before'){
 	$fileDate = date("Y-m-") . (date(d)-2);
 }
 
@@ -29,7 +27,7 @@ if ( = 'yesterday'){
 $fileName = "/home/pi/EPSolar_Tracer/data/tracerData" . $fileDate . ".csv";
 $rawDataArray = [];
 
-echo "<h3>Today's Date:</h3>" . date("Y-m-d") . "<br>";
+echo "<h3>Today's Date:</h3>" . $fileDate . "<br>";
 
 echo "<p>View: <a href='/?date=today'>Today</a> | <a href='/?date=yesterday'>Yesterday</a> | <a href='/?date=before'>The Day Before</a></p>";
 
