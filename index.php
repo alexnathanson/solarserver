@@ -95,7 +95,7 @@ echo "<h4>Today:</h4>";
       }
       
 //PV DATA
-	//var pvData = JSON.parse(JSON.stringify(phpData));
+	var pvData = phpData.slice(0,10);
 /*
 	for (var sp = 0; sp < pvData.length;sp++){
 		pvData[sp].splice(10,3);//remove columns 10-13
@@ -104,12 +104,15 @@ echo "<h4>Today:</h4>";
 	
 */
 	//console.log(pvData);
-	var pvData = cleanData(phpData, "date");
+	pvData = cleanData(pvData, "date");
 //BAT DATA
-	var batData = cleanData(phpData, "data");
+	var batData = phpData.slice(4,6);
+
+	batData = cleanData(phpData, "data");
 
 //LOAD DATA
-	var loadData = cleanData(phpData, "date");
+	var loadData = phpData.slice(9,5);
+	loadData = cleanData(loadData, "date");
 
 	//select columns
       //this only works for taking a contiguous subset
@@ -150,7 +153,6 @@ echo "<h4>Today:</h4>";
 
       return tempData;
       }
-      
 
       function drawChart() {
         var PVdataMap = google.visualization.arrayToDataTable(pvData);
