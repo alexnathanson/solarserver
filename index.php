@@ -108,6 +108,11 @@ echo "<h4>Today:</h4>";
 */
 	var pvData = cleanData(phpData.clone(), "date");
 
+	for (var sp = 0; sp < pvData.length;sp++){
+		pvData[sp].splice(10,3);//remove columns 10-13
+		pvData[sp].splice(4,5);//remove colums 4-8
+	}
+	
 	console.log(pvData);
 
 //BAT DATA
