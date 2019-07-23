@@ -95,7 +95,9 @@ echo "<h4>Today:</h4>";
 	}
       
 	Array.prototype.clone = function() {
-		return this.slice(0);
+		return JSON.parse(JSON.stringify(this)); //deep copy
+
+		//return this.slice(0); //shallow copy
 	};
 //PV DATA
 	//var pvData = ;
