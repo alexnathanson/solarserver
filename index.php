@@ -106,7 +106,7 @@ echo "<h4>Today:</h4>";
 	}
 	
 */
-	var pvData = cleanData(Array.clone(phpData), "date");
+	var pvData = cleanData(phpData.clone(), "date");
 
 	console.log(pvData);
 
