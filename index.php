@@ -13,13 +13,22 @@
 
 <?php
 
+$fileDate = date("Y-m-d");
+if ( = 'yesterday'){
+	$fileDate = date("Y-m-") . (date(d)-1);
+	echo '<script>console.log(<php? echo $fileDate ?>)</script>';
+}elseif( = 'before'){
+	$fileDate = date("Y-m-") . (date(d)-2);
+	echo '<script>console.log(<php? echo $fileDate ?>)</script>';
+}
+
 //variables
-$fileName = "/home/pi/EPSolar_Tracer/data/tracerData" . date("Y-m-d") . ".csv";
+$fileName = "/home/pi/EPSolar_Tracer/data/tracerData" . $fileDate . ".csv";
 $rawDataArray = [];
 
 echo "<h3>Today's Date:</h3>" . date("Y-m-d") . "<br>";
 
-echo "<p>View: <a href='?date=today'>Today</a> | <a href='?date=yesterday'>Yesterday</a> | <a href='?date=before'>The Day Before</a></p>";
+echo "<p>View: <a href='/?date=today'>Today</a> | <a href='/?date=yesterday'>Yesterday</a> | <a href='/?date=before'>The Day Before</a></p>";
 
 echo "<h3>File Name:</h3>". $fileName . "<br>";
 
