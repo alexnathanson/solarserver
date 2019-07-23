@@ -123,13 +123,17 @@ echo "<h4>Today:</h4>";
 
 	var batData = cleanData(phpData.clone(), "date");
 
-	console.log(batData);
+	//console.log(batData);
 	//remember this happens AFTER the columns are shuffled around!
 	for (var sp = 0; sp < batData.length;sp++){
 		batData[sp].splice(1,7);//remove columns
 		//batData[sp].splice(8);//remove colums
 	}
 	
+	//scale bat percentage to 0-100
+	for (var bper = 0; bper < batData.length;bper++){
+		batData[bper][1]=batData[bper][1] * 100;
+	}
 
 //LOAD DATA
 	//var loadData = phpData.slice(9);//if only 1 element it goes to the end
