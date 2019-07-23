@@ -121,8 +121,9 @@ echo "<h4>Today:</h4>";
 //BAT DATA
 	//var batData = phpData.slice(4,6);
 
-	var batData = cleanData(phpData.clone(), "data");
+	var batData = cleanData(phpData.clone(), "date");
 
+	console.log(batData);
 	//remember this happens AFTER the columns are shuffled around!
 	for (var sp = 0; sp < batData.length;sp++){
 		batData[sp].splice(1,7);//remove columns
