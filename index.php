@@ -84,18 +84,21 @@ echo "<h4>Today:</h4>";
 ?>
 
 <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart', 'line']});
-      google.charts.setOnLoadCallback(drawChart);
+	google.charts.load('current', {'packages':['corechart', 'line']});
+	google.charts.setOnLoadCallback(drawChart);
 
-      var phpData = <?php echo json_encode($rawDataArray) ?>;
+	var phpData = <?php echo json_encode($rawDataArray) ?>;
 
-      //remove the time column from the end
-      for (var p =0; p <phpData.length; p++){
-      	phpData[p].pop();
-      }
+	//remove the time column from the end
+	for (var p =0; p <phpData.length; p++){
+		phpData[p].pop();
+	}
       
+	Array.prototype.clone = function() {
+		return this.slice(0);
+	};
 //PV DATA
-	var pvData = phpData.slice(0,10);
+	//var pvData = ;
 /*
 	for (var sp = 0; sp < pvData.length;sp++){
 		pvData[sp].splice(10,3);//remove columns 10-13
@@ -103,15 +106,17 @@ echo "<h4>Today:</h4>";
 	}
 	
 */
-	//console.log(pvData);
-	pvData = cleanData(pvData, "date");
+	var pvData = cleanData(phpData.clone, "date");
+
+	console.log(pvData);
+
 //BAT DATA
 	var batData = phpData.slice(4,6);
 
 	batData = cleanData(phpData, "data");
 
 //LOAD DATA
-	var loadData = phpData.slice(9,5);
+	var loadData = phpData.slice(9);//if only 1 element it goes to the end
 	loadData = cleanData(loadData, "date");
 
 	//select columns
@@ -197,6 +202,8 @@ echo "<h4>Today:</h4>";
 
         LOADchart.draw(LOADdataMap, LOADoptions);
     }
+
+    
 </script>
 
 <div id="PV_chart" style="width: 1500px; height: 900px"></div>
