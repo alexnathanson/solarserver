@@ -113,7 +113,7 @@ echo "<h4>Today:</h4>";
 	//remember this happens AFTER the columns are shuffled around!
 	for (var sp = 0; sp < pvData.length;sp++){
 		pvData[sp].splice(1,3);//remove columns
-		pvData[sp].splice(8);//remove colums
+		pvData[sp].splice(5);//remove colums
 	}
 	
 	//console.log(pvData);
