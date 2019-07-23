@@ -13,13 +13,16 @@
 
 <?php
 
+//get the query string
+$date = htmlspecialchars($_GET["date"]);
+
+echo $date;
+
 $fileDate = date("Y-m-d");
 if ( = 'yesterday'){
 	$fileDate = date("Y-m-") . (date(d)-1);
-	echo '<script>console.log(<php? echo $fileDate ?>)</script>';
 }elseif( = 'before'){
 	$fileDate = date("Y-m-") . (date(d)-2);
-	echo '<script>console.log(<php? echo $fileDate ?>)</script>';
 }
 
 //variables
