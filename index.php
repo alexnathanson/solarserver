@@ -111,13 +111,13 @@ echo "<h4>Today:</h4>";
 	console.log(pvData);
 
 //BAT DATA
-	var batData = phpData.slice(4,6);
+	//var batData = phpData.slice(4,6);
 
-	batData = cleanData(phpData, "data");
+	var batData = cleanData(phpData.clone(), "data");
 
 //LOAD DATA
-	var loadData = phpData.slice(9);//if only 1 element it goes to the end
-	loadData = cleanData(loadData, "date");
+	//var loadData = phpData.slice(9);//if only 1 element it goes to the end
+	var loadData = cleanData(phpData.clone(), "date");
 
 	//select columns
       //this only works for taking a contiguous subset
