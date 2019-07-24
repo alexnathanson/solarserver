@@ -17,9 +17,9 @@
 $date = htmlspecialchars($_GET["date"]);
 
 $fileDate = date("Y-m-d");
-if ( $date = 'yesterday'){
+if ($date == 'yesterday'){
 	$fileDate = date("Y-m-") . (date(d)-1);
-}elseif( $date = 'before'){
+}elseif( $date == 'before'){
 	$fileDate = date("Y-m-") . (date(d)-2);
 }
 
