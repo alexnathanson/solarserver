@@ -10,4 +10,7 @@ After cloning this repo move the index.php file up one directory.
 See https://www.github.com/alexnathanson/EPSolar_Tracer
 
 ## getting server power consumption data via external Raspberry Pi + INA219
-See https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-circuitpython for installation instructions
+See https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-circuitpython for wiring instructions and code
+
+Installing CircuitPython Libraries on Raspberry Pi
+https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
