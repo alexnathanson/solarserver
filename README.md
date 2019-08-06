@@ -6,5 +6,8 @@ https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress/9
 
 After cloning this repo move the index.php file up one directory.
 
-## getting solar data
+## getting solar data via the charge controller data power
 See https://www.github.com/alexnathanson/EPSolar_Tracer
+
+## getting server power consumption data via external Raspberry Pi + INA219
+See https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-circuitpython for installation instructions

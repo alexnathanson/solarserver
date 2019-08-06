@@ -1,4 +1,6 @@
 # stuff to ignore
 
+ipaddresses_homenetwork.txt
+
 *.sublime-project
 *.sublime-workspace
