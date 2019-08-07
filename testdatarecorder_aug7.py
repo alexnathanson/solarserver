@@ -12,7 +12,8 @@ def averageList(listToAverage):
 	for a in listToAverage:
 		myAvg+= a
 
-	print("Samples collected in 1 second: {}".format(len(listToAverage)))
+	#because this function is called for both current and voltage it will print twice
+	#print("Samples collected in 1 second: {}".format(len(listToAverage)))
 
 	return myAvg/len(listToAverage)
 
@@ -29,11 +30,29 @@ ina219 = INA219(i2c_bus)
 
 print("ina219 test")
 
+# display some of the advanced field (just to test)
+print("Config register:")
+print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
+print("  gain:                 0x%1X" % ina219.gain)
+print("  bus_adc_resolution:   0x%1X" % ina219.bus_adc_resolution)
+print("  shunt_adc_resolution: 0x%1X" % ina219.shunt_adc_resolution)
+print("  mode:                 0x%1X" % ina219.mode)
+print("")
+
 # optional : change configuration to use 32 samples averaging for both bus voltage and shunt voltage
-ina219.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S
-ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_32S
+ina219.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S # 12bit,  32 samples, 17.02ms
+ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_32S # 12bit,  32 samples, 17.02ms
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
+
+# display some of the advanced field (just to test)
+print("Post-config register:")
+print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
+print("  gain:                 0x%1X" % ina219.gain)
+print("  bus_adc_resolution:   0x%1X" % ina219.bus_adc_resolution)
+print("  shunt_adc_resolution: 0x%1X" % ina219.shunt_adc_resolution)
+print("  mode:                 0x%1X" % ina219.mode)
+print("")
 
 cMeasurements = []
 vMeasurements = []
