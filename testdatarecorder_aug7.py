@@ -5,6 +5,24 @@ import board
 from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219
 #import datetime
 
+def averageList(listToAverage):
+
+	myAvg = 0.0
+
+	for a in listToAverage:
+		myAvg+= a
+
+	print("Samples collected in 1 second: {}".format(len(listToAverage)))
+
+	return myAvg/len(listToAverage)
+
+def rootMeanSquared(listToRMS):
+	RMS = 0.0
+
+	#some RMS equation
+
+	return RMS
+	
 i2c_bus = board.I2C()
 
 ina219 = INA219(i2c_bus)
@@ -60,21 +78,3 @@ while totalElapsedTime - testStartTime < testTime :
 totalElapsedTime = time.time() - startTime
 
 print("Last second second: {}".format(thisMeasurement[len(thisMeasurement-1)]))
-
-def averageList(listToAverage):
-
-	myAvg = 0.0
-
-	for a in listToAverage:
-		myAvg+= a
-
-	print("Samples collected in 1 second: {}".format(len(listToAverage)))
-
-	return myAvg/len(listToAverage)
-
-def rootMeanSquared(listToRMS):
-	RMS = 0.0
-
-	#some RMS equation
-
-	return RMS
