@@ -48,10 +48,10 @@ while elapsedTime - startTime < testTime :
 
 		bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
 	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
-	    current = ina219.current                # current in mA
+		current = ina219.current                # current in mA
 
-	    cSampleList.append(current)
-	    vSampleList.append(bus_voltage)
+		cSampleList.append(current)
+		vSampleList.append(bus_voltage)
 	else:
 		print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
     
