@@ -33,8 +33,7 @@ ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_32S
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 
-startTime = time.time()
-elapsedTime = time.time()
+
 cSampleList = []
 vSampleList = []
 
@@ -47,6 +46,9 @@ for testNum in range (0, testAmt):
 	
 	print("Test #{}".format(testNum))
 
+	elapsedTime = time.time()
+	startTime = time.time()
+	
 	#run each test for 10 seconds
 	while elapsedTime - startTime < 10.0 :
 	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
