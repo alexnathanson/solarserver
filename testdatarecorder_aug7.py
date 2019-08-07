@@ -37,7 +37,7 @@ while totalElapsedTime - testStartTime < testTime :
 	vSampleList = []
 
 	mElapsedTime = time.time()
- 	mStartTime = time.time()
+	mStartTime = time.time()
 
  	thisMeasurement = []
 	#run each measurement for 1 seconds
