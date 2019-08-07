@@ -14,3 +14,5 @@ See https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-ci
 
 Installing CircuitPython Libraries on Raspberry Pi
 https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
+
+If the power meter Pi and the server Pi are plugged in to the same circuit, they do not necessarily need to be connected by an additional ground wire.
