@@ -27,40 +27,55 @@ ina219 = INA219(i2c_bus)
 
 print("ina219 test")
 
-# display some of the advanced field (just to test)
-'''
-print("Config register:")
-print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
-print("  gain:                 0x%1X" % ina219.gain)
-print("  bus_adc_resolution:   0x%1X" % ina219.bus_adc_resolution)
-print("  shunt_adc_resolution: 0x%1X" % ina219.shunt_adc_resolution)
-print("  mode:                 0x%1X" % ina219.mode)
-print("")
-'''
 # optional : change configuration to use 32 samples averaging for both bus voltage and shunt voltage
 ina219.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S
 ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_32S
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 
-# measure and display loop
-
 startTime = time.time()
 elapsedTime = time.time()
 cSampleList = []
 vSampleList = []
 
-print("Start time: {}".format(startTime))
+cCumulativeTests = []
+vCumulativeTests = []
 
-while elapsedTime - startTime < 10.0 :
-    #bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
-    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
-    current = ina219.current                # current in mA
+testAmt = 10
+#run the test X times
+while testNum < testAmt:
+	
+	print("Test #{}".format(testNum))
 
-    cSampleList.append(current)
-    #vSampleList.append(bus_voltage)
+	#run each test for 10 seconds
+	while elapsedTime - startTime < 10.0 :
+	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
+	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
+	    current = ina219.current                # current in mA
 
-    elapsedTime = time.time()
+	    cSampleList.append(current)
+	    vSampleList.append(bus_voltage)
 
-print("Current samples per second: {}".format(len(cSampleList)/10.0))
-#print("Voltage samples per second: {}".format(len(vSampleList)/10.0))
+	    elapsedTime = time.time()
+
+	#divide the amount of samples by 10 seconds to get the per second amount
+	cCumulativeTests.append(len(cSampleList)/10.0)
+	vCumulativeTests.append(len(vSampleList)/10.0)
+
+	testNum++
+
+#get the average test sample amount
+getAvgC = 0.0;
+getAvgV = 0.0;
+
+for x in cCumulativeTests:
+	getAvgC += x
+
+for x in vCumulativeTests:
+	getAvgV += x
+
+getAvgC = getAvgC/testAmt
+getAvgV = getAvgV/testAmt
+
+print("Current samples per second: {}".format(getAvgC))
+print("Voltage samples per second: {}".format(getAvgV))
