@@ -22,7 +22,7 @@ def rootMeanSquared(listToRMS):
 	#some RMS equation
 
 	return RMS
-	
+
 i2c_bus = board.I2C()
 
 ina219 = INA219(i2c_bus)
@@ -77,4 +77,6 @@ while totalElapsedTime - testStartTime < testTime :
 
 totalElapsedTime = time.time() - startTime
 
-print("Last second second: {}".format(thisMeasurement[len(thisMeasurement-1)]))
+
+for x in thisMeasurement:
+	print(x)
