@@ -52,27 +52,11 @@ while elapsedTime - startTime < testTime :
 
 		cSampleList.append(current)
 		vSampleList.append(bus_voltage)
-	else:
-		print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
+	#else:
+		#print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 
 	elapsedTime = time.time()
 
 #divide the amount of samples by 10 seconds to get the per second amount
-cCumulativeTests.append(len(cSampleList)/10.0)
-vCumulativeTests.append(len(vSampleList)/10.0)
-
-#get the average test sample amount
-getAvgC = 0.0;
-getAvgV = 0.0;
-
-for x in cCumulativeTests:
-	getAvgC += x
-
-for x in vCumulativeTests:
-	getAvgV += x
-
-getAvgC = getAvgC/testAmt
-getAvgV = getAvgV/testAmt
-
-print("Current samples per second: {}".format(getAvgC))
-print("Voltage samples per second: {}".format(getAvgV))
+print("Current samples per second: {}".format(len(cSampleList)/10.0))
+print("Voltage samples per second: {}".format(len(vSampleList)/10.0))
