@@ -75,8 +75,7 @@ while totalElapsedTime - testStartTime < testTime :
 	thisMeasurement.append(averageList(vSampleList))
 	thisMeasurement.append(mStartTime)
 
-totalElapsedTime = time.time() - startTime
-
+	totalElapsedTime = time.time()
 
 for x in thisMeasurement:
 	print(x)
