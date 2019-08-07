@@ -17,6 +17,7 @@ ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_128S
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 
+
 ina219.mode = Mode.SVOLT_CONTINUOUS
 
 # display some of the advanced field
