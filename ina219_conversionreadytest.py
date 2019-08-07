@@ -32,7 +32,7 @@ print("")
 cCumulativeTests = []
 vCumulativeTests = []
 
-testTime = 10.0 #seconds per test
+testTime = 5.0 #seconds per test
 
 #clear sample lists
 cSampleList = []
@@ -59,3 +59,4 @@ while elapsedTime - startTime < testTime :
 #divide the amount of samples by 10 seconds to get the per second amount
 print("Current samples per second: {}".format(len(cSampleList)/testTime))
 print("Voltage samples per second: {}".format(len(vSampleList)/testTime))
+print(cSampleList)
