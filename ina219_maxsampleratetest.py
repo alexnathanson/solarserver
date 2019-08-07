@@ -43,7 +43,7 @@ vCumulativeTests = []
 
 testAmt = 10
 #run the test X times
-while testNum < testAmt:
+for testNum in range (0, testAmt):
 	
 	print("Test #{}".format(testNum))
 
@@ -61,8 +61,6 @@ while testNum < testAmt:
 	#divide the amount of samples by 10 seconds to get the per second amount
 	cCumulativeTests.append(len(cSampleList)/10.0)
 	vCumulativeTests.append(len(vSampleList)/10.0)
-
-	testNum+=1
 
 #get the average test sample amount
 getAvgC = 0.0;
