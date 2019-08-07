@@ -56,6 +56,7 @@ while elapsedTime - startTime < testTime :
 
 	elapsedTime = time.time()
 
+print("Test time: {}".format(elapsedTime - startTime))
 #divide the amount of samples by 10 seconds to get the per second amount
 print("Current samples per second: {}".format(len(cSampleList)/testTime))
 print("Voltage samples per second: {}".format(len(vSampleList)/testTime))
