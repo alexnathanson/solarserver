@@ -48,6 +48,8 @@ testTime = 5.0
 
 print("Running test for {} seconds".format(testTime))
 
+testResults = []
+
 while totalElapsedTime - testStartTime < testTime :
 
  	#clear sample lists
@@ -58,6 +60,7 @@ while totalElapsedTime - testStartTime < testTime :
 	mStartTime = time.time()
 
 	thisMeasurement = []
+
 	#run each measurement for 1 seconds
 	while mElapsedTime - mStartTime < 1.0 :
 	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
@@ -75,7 +78,9 @@ while totalElapsedTime - testStartTime < testTime :
 	thisMeasurement.append(averageList(vSampleList))
 	thisMeasurement.append(mStartTime)
 
+	testResults.append(thisMeasurement)
+
 	totalElapsedTime = time.time()
 
-for x in thisMeasurement:
+for x in testResults:
 	print(x)
