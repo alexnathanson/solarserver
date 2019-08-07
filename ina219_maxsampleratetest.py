@@ -62,7 +62,7 @@ while testNum < testAmt:
 	cCumulativeTests.append(len(cSampleList)/10.0)
 	vCumulativeTests.append(len(vSampleList)/10.0)
 
-	testNum++
+	testNum+=1
 
 #get the average test sample amount
 getAvgC = 0.0;
