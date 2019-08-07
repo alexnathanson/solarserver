@@ -26,6 +26,7 @@ print("  gain:                 0x%1X" % ina219.gain)
 print("  bus_adc_resolution:   0x%1X" % ina219.bus_adc_resolution)
 print("  shunt_adc_resolution: 0x%1X" % ina219.shunt_adc_resolution)
 print("  mode:                 0x%1X" % ina219.mode)
+print("  conversion reading bit: 0x%1X" % ina219.conversion_ready)
 print("")
 
 cCumulativeTests = []
