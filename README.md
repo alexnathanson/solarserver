@@ -16,3 +16,5 @@ Installing CircuitPython Libraries on Raspberry Pi
 https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
 
 If the power meter Pi and the server Pi are plugged in to the same circuit, they do not necessarily need to be connected by an additional ground wire.
+
+Library API info: https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py
