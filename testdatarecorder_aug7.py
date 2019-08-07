@@ -39,7 +39,7 @@ while totalElapsedTime - testStartTime < testTime :
 	mElapsedTime = time.time()
 	mStartTime = time.time()
 
- 	thisMeasurement = []
+	thisMeasurement = []
 	#run each measurement for 1 seconds
 	while mElapsedTime - mStartTime < 1.0 :
 	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
