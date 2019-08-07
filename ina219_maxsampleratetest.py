@@ -1,20 +1,4 @@
-# from https://github.com/adafruit/Adafruit_CircuitPython_INA219
-# wiring and installation instructions https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-circuitpython
-
-'''
-# some other test code
-import board
-import busio
-import adafruit_ina219
-i2c = busio.I2C(board.SCL, board.SDA)
-sensor = adafruit_ina219.INA219(i2c)
-
-print("Bus Voltage:   {} V".format(ina219.bus_voltage))
-print("Shunt Voltage: {} mV".format(ina219.shunt_voltage / 1000))
-print("Current:       {} mA".format(ina219.current))
-'''
-
-"""Sample code and test for adafruit_in219"""
+#test to determine maximum sample rate of ina219 via raspberry pi
 
 import time
 import board
@@ -33,10 +17,6 @@ ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_32S
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 
-
-cSampleList = []
-vSampleList = []
-
 cCumulativeTests = []
 vCumulativeTests = []
 
@@ -46,9 +26,13 @@ for testNum in range (0, testAmt):
 	
 	print("Test #{}".format(testNum))
 
+	#clear sample lists
+	cSampleList = []
+	vSampleList = []
+
 	elapsedTime = time.time()
 	startTime = time.time()
-	
+
 	#run each test for 10 seconds
 	while elapsedTime - startTime < 10.0 :
 	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
