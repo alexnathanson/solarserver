@@ -31,12 +31,12 @@ testTime = 5.0
 print("Running test for {} seconds".format(testTime))
 
 while totalElapsedTime - testStartTime < testTime :
- 	
+
  	#clear sample lists
 	cSampleList = []
 	vSampleList = []
 
- 	mElapsedTime = time.time()
+	mElapsedTime = time.time()
  	mStartTime = time.time()
 
  	thisMeasurement = []
