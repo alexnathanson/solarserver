@@ -34,8 +34,6 @@ vCumulativeTests = []
 
 testTime = 10.0 #seconds per test
 
-print("Test #{}".format(testNum))
-
 #clear sample lists
 cSampleList = []
 vSampleList = []
@@ -46,9 +44,9 @@ startTime = time.time()
 #run each test for X seconds
 while elapsedTime - startTime < testTime :
 	if ina219.conversion_ready == 1:
-		print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
+		print("conversion ready bit: 0x%1X" % ina219.conversion_ready)
 
-	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
+		bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
 	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
 	    current = ina219.current                # current in mA
 
@@ -56,6 +54,7 @@ while elapsedTime - startTime < testTime :
 	    vSampleList.append(bus_voltage)
 	else:
 		print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
+    
     elapsedTime = time.time()
 
 #divide the amount of samples by 10 seconds to get the per second amount
