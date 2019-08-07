@@ -17,6 +17,7 @@ ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_128S
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 
+ina219.mode = mode.SANDBVOLT_TRIGGERED
 
 # display some of the advanced field
 # see https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py class ADCResolution for details
