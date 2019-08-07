@@ -44,7 +44,6 @@ startTime = time.time()
 #run each test for X seconds
 while elapsedTime - startTime < testTime :
 	if ina219.conversion_ready == 1:
-		print("conversion ready bit: 0x%1X" % ina219.conversion_ready)
 
 		bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
 	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
@@ -58,5 +57,5 @@ while elapsedTime - startTime < testTime :
 	elapsedTime = time.time()
 
 #divide the amount of samples by 10 seconds to get the per second amount
-print("Current samples per second: {}".format(len(cSampleList)/10.0))
-print("Voltage samples per second: {}".format(len(vSampleList)/10.0))
+print("Current samples per second: {}".format(len(cSampleList)/testTime))
+print("Voltage samples per second: {}".format(len(vSampleList)/testTime))
