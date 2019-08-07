@@ -54,8 +54,8 @@ while elapsedTime - startTime < testTime :
 		vSampleList.append(bus_voltage)
 	else:
 		print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
-    
-    elapsedTime = time.time()
+
+	elapsedTime = time.time()
 
 #divide the amount of samples by 10 seconds to get the per second amount
 cCumulativeTests.append(len(cSampleList)/10.0)
