@@ -20,7 +20,9 @@ ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 cCumulativeTests = []
 vCumulativeTests = []
 
-testAmt = 10
+testTime = 10.0 #seconds per test
+testAmt = 10 #total amount of tests
+
 #run the test X times
 for testNum in range (0, testAmt):
 	
@@ -33,8 +35,8 @@ for testNum in range (0, testAmt):
 	elapsedTime = time.time()
 	startTime = time.time()
 
-	#run each test for 10 seconds
-	while elapsedTime - startTime < 10.0 :
+	#run each test for X seconds
+	while elapsedTime - startTime < testTime :
 	    bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
 	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
 	    current = ina219.current                # current in mA
