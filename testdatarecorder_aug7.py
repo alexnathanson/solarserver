@@ -30,6 +30,7 @@ ina219 = INA219(i2c_bus)
 
 print("ina219 test")
 
+'''
 # display some of the advanced field (just to test)
 print("Config register:")
 print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
@@ -38,15 +39,17 @@ print("  bus_adc_resolution:   0x%1X" % ina219.bus_adc_resolution)
 print("  shunt_adc_resolution: 0x%1X" % ina219.shunt_adc_resolution)
 print("  mode:                 0x%1X" % ina219.mode)
 print("")
-
+'''
 # optional : change configuration to use 32 samples averaging for both bus voltage and shunt voltage
 ina219.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S # 12bit,  32 samples, 17.02ms
 ina219.shunt_adc_resolution = ADCResolution.ADCRES_12BIT_32S # 12bit,  32 samples, 17.02ms
 # optional : change voltage range to 16V
 ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
+# might be good to set max expected current in the future
 
-# display some of the advanced field (just to test)
-print("Post-config register:")
+# display some of the advanced field
+# see https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py class ADCResolution for details
+print("Config register:")
 print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
 print("  gain:                 0x%1X" % ina219.gain)
 print("  bus_adc_resolution:   0x%1X" % ina219.bus_adc_resolution)
