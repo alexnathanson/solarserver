@@ -31,9 +31,6 @@ print("  mode:                 0x%1X" % ina219.mode)
 print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 print("")
 
-cCumulativeTests = []
-vCumulativeTests = []
-
 testTime = 5.0
 
 #clear sample lists
@@ -64,6 +61,5 @@ while elapsedTime - startTime < testTime :
 	testResults.append(sampleList)
 print("Test time: {}".format(elapsedTime - startTime))
 #divide the amount of samples by 10 seconds to get the per second amount
-print("Current samples per second: {}".format(len(cSampleList)/testTime))
-print("Voltage samples per second: {}".format(len(vSampleList)/testTime))
+print("Current samples per second: {}".format(len(testResults)/testTime))
 print(testResults)
