@@ -29,7 +29,7 @@ $rawDataArray = [];
 
 echo "<h3>Today's Date:</h3>" . $fileDate . "<br>";
 
-echo "<p>View: <a href='/?date=today'>Today</a> | <a href='/?date=yesterday'>Yesterday</a> | <a href='/?date=before'>The Day Before</a></p>";
+echo "<p>View: <a href='/?date=today' id="today">Today</a> | <a href='/?date=yesterday' id='yesterday'>Yesterday</a> | <a href='/?date=before' id='daybefore'>The Day Before</a></p>";
 
 echo "<h3>File Name:</h3>". $fileName . "<br>";
 
