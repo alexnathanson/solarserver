@@ -53,12 +53,14 @@ while elapsedTime - startTime < testTime :
 		sampleList.append(current)
 		sampleList.append(bus_voltage)
 		sampleList.append(time.time())
+
+		testResults.append(sampleList)
+
 	#else:
 		#print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 
 	elapsedTime = time.time()
 
-	testResults.append(sampleList)
 print("Test time: {}".format(elapsedTime - startTime))
 #divide the amount of samples by 10 seconds to get the per second amount
 print("Current samples per second: {}".format(len(testResults)/testTime))
