@@ -11,10 +11,10 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_search_in_python_org(self):
         driver = self.driver
-        driver.get("http://192.168.1.79")
-        self.assertIn("192", driver.title)
+        driver.get("http://192.168.1.79/dropdown/dropdown_static.html")
+        self.assertIn("Solar", driver.title)
         elem = driver.find_element_by_id("yesterday")
-        driver.get_cookies()
+        cookieMonster = driver.get_cookies()
 
         #elem.send_keys("pycon")
         #elem.send_keys(Keys.RETURN)
