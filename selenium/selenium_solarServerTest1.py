@@ -4,21 +4,25 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-class PythonOrgSearch(unittest.TestCase):
+class solarServerTest(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
 
     def test_search_in_python_org(self):
         driver = self.driver
-        driver.get("http://192.168.1.79/dropdown/dropdown_static.html")
+        driver.get("http://192.168.1.79/dropdown/dropdown_dynamic.html")
         self.assertIn("Solar", driver.title)
-        elem = driver.find_element_by_id("yesterday")
-        cookieMonster = driver.get_cookies()
+        #elem = driver.find_element_by_id("yesterday")
+        #cookieMonster = driver.get_cookies()
 
-        #elem.send_keys("pycon")
-        #elem.send_keys(Keys.RETURN)
-        #assert "No results found." not in driver.page_source
+        menu = driver.find_element_by_css_selector(".dropbtn")
+        hidden_submenu = driver.find_element_by_css_selector(".nav #submenu1")
+
+        actions = ActionChains(driver)
+        actions.move_to_element(menu)
+        actions.click(hidden_submenu)
+        actions.perform()
 
 
     def tearDown(self):
