@@ -23,7 +23,7 @@ ina219.mode = Mode.SVOLT_CONTINUOUS
 
 # display some of the advanced field
 # see https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py class ADCResolution for details
-print("arguments: " + sys.argv)
+print("arguments: " + str(sys.argv))
 print("Config register:")
 print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
 print("  gain:                 0x%1X" % ina219.gain)
