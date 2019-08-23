@@ -18,3 +18,14 @@ https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuit
 If the power meter Pi and the server Pi are plugged in to the same circuit, they do not necessarily need to be connected by an additional ground wire.
 
 Library API info: https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py
+
+##Test Steps
+###1) initiate the server if its not already running
+###2) initiate the power meter
+* must use python3 -> python3 [script name] [runtime in seconds]
+* runtime should be at least 2.25X the test runtime
+###3) immediately initiate the selenium test
+* python [script name] [runtime in seconds]
+* if runtime isn't specified, default runtime is 5 seconds
+###4) pscp the data from the power meter
+###5) bring data into jupyter notebook

@@ -37,29 +37,21 @@ class SolarServerTest:
         
         assert "dropdown" in self.driver.title
         
-        menu = self.driver.find_element_by_class_name("menu")
-        menu_item = self.driver.find_element_by_id("submenu1")
+        menuS = self.driver.find_element_by_class_name("menu")
+        menu_itemS = self.driver.find_element_by_id("submenu1")
 
         actions = ActionChains(self.driver)
-        actions.move_to_element(menu)
-        actions.click(menu_item)
+        actions.move_to_element(menuS)
+        actions.click(menu_itemS)
        
         actions.perform()
         
-'''
-    def test_runner(self, testLength):
-        tmCurrentTime = time.time()
-        tmStartTime = time.time()
-        while (tmCurrentTime - testLength < tmStartTime):
-            self.test_click("http://192.168.1.79/dropdown/dropdown_dynamic.html")
-            tmCurrentTime = time.time()
-        self.tearDown()
-'''
     def tearDown(self):
         self.driver.close()
         #self.driver.quit()
 
 fileName = 'data/selenium-'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
+print fileName
 
 dataDF = pd.DataFrame(columns=['task','time'])
 
@@ -69,7 +61,10 @@ if (len(sys.argv) > 1):
 else: 
     testTime = 5 #default 5 seconds
 
+
 #Dropdown button test
+print "starting dynamic test"
+
 SolarServer = SolarServerTest()
 dataDF = dataDF.append({'task' : 'start dynamic' , 'time': time.time()},ignore_index=True)
 
@@ -86,7 +81,11 @@ dataDF = dataDF.append({'task' : 'stop dynamic' , 'time': time.time()},ignore_in
 
 time.sleep(10)
 
+
 # Static button test
+
+print "starting static test"
+
 SolarServer = SolarServerTest()
 dataDF = dataDF.append({'task' : 'start static' , 'time': time.time()},ignore_index=True)
 
