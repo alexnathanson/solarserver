@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import csv
 
-fileName = 'data/ina219'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
+fileName = 'data/ina219-'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
 
 i2c_bus = board.I2C()
 
