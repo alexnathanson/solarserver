@@ -51,7 +51,7 @@ class SolarServerTest:
         #self.driver.quit()
 
 fileName = 'data/selenium-'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
-print fileName
+print (fileName)
 
 dataDF = pd.DataFrame(columns=['task','time'])
 
@@ -67,7 +67,7 @@ for i in list(range(2)):
     time.sleep(30)
 
     #Dropdown button test
-    print "starting dynamic test"
+    print ("starting dynamic test")
 
     SolarServer = SolarServerTest()
     dataDF = dataDF.append({'task' : 'start dynamic ' + str(i) , 'time': time.time()},ignore_index=True)
@@ -88,7 +88,7 @@ for i in list(range(2)):
 
     # Static button test
 
-    print "starting static test"
+    print ("starting static test")
 
     SolarServer = SolarServerTest()
     dataDF = dataDF.append({'task' : 'start static '+ str(i), 'time': time.time()},ignore_index=True)

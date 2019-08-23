@@ -48,7 +48,7 @@ testTime = float(sys.argv[1])
 elapsedTime = time.time()
 startTime = time.time()
 
-print "Starting!"
+print ("Starting!")
 #run each test for X seconds
 while elapsedTime - startTime < testTime :
 
