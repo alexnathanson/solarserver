@@ -52,6 +52,7 @@ class SolarServerTest:
 
 fileName = 'data/selenium-'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
 print (fileName)
+print("")
 
 dataDF = pd.DataFrame(columns=['task','time'])
 
@@ -64,10 +65,10 @@ else:
 # run the whole thing twice to account for start up weirdness
 for i in list(range(2)):
 
-    time.sleep(30)
+    time.sleep(20)
 
     #Dropdown button test
-    print ("starting dynamic test")
+    print ("Starting dynamic test!")
 
     SolarServer = SolarServerTest()
     dataDF = dataDF.append({'task' : 'start dynamic ' + str(i) , 'time': time.time()},ignore_index=True)
@@ -77,7 +78,7 @@ for i in list(range(2)):
         
     while (tmCurrentTime - testTime < tmStartTime):
         dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click_dynamic("http://192.168.1.79/dropdown/dropdown_dynamic.html")
+        SolarServer.test_click_dynamic("http://192.168.1.79/dropdown/dropdown_dynamic_image.html")
         tmCurrentTime = time.time()
 
     SolarServer.tearDown()
@@ -88,7 +89,7 @@ for i in list(range(2)):
 
     # Static button test
 
-    print ("starting static test")
+    print ("Starting static test!")
 
     SolarServer = SolarServerTest()
     dataDF = dataDF.append({'task' : 'start static '+ str(i), 'time': time.time()},ignore_index=True)
