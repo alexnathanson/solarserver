@@ -43,28 +43,22 @@ dataDF = pd.DataFrame(columns=['mA','V','time'])
 testTime = float(sys.argv[1])
 
 #clear sample lists
-testResults = []
+#testResults = []
 
 elapsedTime = time.time()
 startTime = time.time()
 
+print "Starting!"
 #run each test for X seconds
 while elapsedTime - startTime < testTime :
 
-	sampleList = []
 
 	if ina219.conversion_ready == 1:
 
 		bus_voltage = ina219.bus_voltage        # voltage on V- (load side)
 	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
 		current = ina219.current                # current in mA
-
-		'''
-		sampleList.append(current)
-		sampleList.append(bus_voltage)
-		sampleList.append(time.time())
-		'''
-		#testResults.append(sampleList)
+		
 		dataDF = dataDF.append({'mA' : current , 'V' : bus_voltage, 'time': time.time()},ignore_index=True)
 
 	#else:

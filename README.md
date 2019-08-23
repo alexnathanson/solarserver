@@ -23,7 +23,7 @@ Library API info: https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob
 ### 1) initiate the server if its not already running
 ### 2) initiate the power meter
 * must use python3 -> python3 [script name] [runtime in seconds]
-* runtime should be at least 2.25X the test runtime
+* runtime should be at least 4X the test runtime + 2x60 seconds sleep time between test + 15 seconds at the beginning and end for good measure -> ((testruntime * 2) + 150)
 ### 3) immediately initiate the selenium test
 * python [script name] [runtime in seconds]
 * if runtime isn't specified, default runtime is 5 seconds
