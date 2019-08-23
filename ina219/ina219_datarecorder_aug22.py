@@ -23,7 +23,7 @@ ina219.mode = Mode.SVOLT_CONTINUOUS
 
 # display some of the advanced field
 # see https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py class ADCResolution for details
-print("arguments: " + str(sys.argv))
+print("Arguments: " + str(sys.argv))
 print("Config register:")
 print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
 print("  gain:                 0x%1X" % ina219.gain)
@@ -33,7 +33,7 @@ print("  mode:                 0x%1X" % ina219.mode)
 print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 print("")
 
-testTime = sys.argv[1]
+testTime = float(sys.argv[1])
 
 #clear sample lists
 testResults = []
@@ -58,6 +58,8 @@ while elapsedTime - startTime < testTime :
 
 		testResults.append(sampleList)
 
+		print(sampleList)
+		print("")
 	#else:
 		#print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 
@@ -66,4 +68,4 @@ while elapsedTime - startTime < testTime :
 print("Test time: {}".format(elapsedTime - startTime))
 #divide the amount of samples by 10 seconds to get the per second amount
 print("Samples per second: {}".format(len(testResults)/testTime))
-print(testResults)
+#print(testResults)
