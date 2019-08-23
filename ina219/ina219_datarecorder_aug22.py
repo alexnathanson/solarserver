@@ -4,7 +4,12 @@ import time
 import sys
 import board
 from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219, Mode
-#import datetime
+import datetime
+import numpy as np
+import pandas as pd
+import csv
+
+fileName = 'data/ina219'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
 
 i2c_bus = board.I2C()
 
@@ -33,6 +38,8 @@ print("  mode:                 0x%1X" % ina219.mode)
 print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 print("")
 
+dataDF = pd.DataFrame(columns=['mA','V','time'])
+
 testTime = float(sys.argv[1])
 
 #clear sample lists
@@ -52,20 +59,31 @@ while elapsedTime - startTime < testTime :
 	    #shunt_voltage = ina219.shunt_voltage    # voltage between V+ and V- across the shunt
 		current = ina219.current                # current in mA
 
+		'''
 		sampleList.append(current)
 		sampleList.append(bus_voltage)
 		sampleList.append(time.time())
+		'''
+		#testResults.append(sampleList)
+		dataDF = dataDF.append({'mA' : current , 'V' : bus_voltage, 'time': time.time()},ignore_index=True)
 
-		testResults.append(sampleList)
-
-		print(sampleList)
-		print("")
 	#else:
 		#print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 
 	elapsedTime = time.time()
 
+
 print("Test time: {}".format(elapsedTime - startTime))
 #divide the amount of samples by 10 seconds to get the per second amount
-print("Samples per second: {}".format(len(testResults)/testTime))
+print("Samples per second: {}".format(len(dataDF)/testTime))
 #print(testResults)
+
+print(dataDF)
+
+#save data to file
+# check if the file already exists
+try:
+	with open(fileName) as csvfile:
+		print("This file already exists!")
+except:
+	dataDF.to_csv(fileName, sep=',',index=False)

@@ -2,8 +2,10 @@
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
-from selenium.webdriver.firefox.options import Log
 import time
+import numpy as np
+import pandas as pd
+import csv
 
 class SolarServerTest:
     
