@@ -2,6 +2,7 @@
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
+from selenium.webdriver.firefox.options import Log
 import time
 
 class SolarServerTest:
@@ -17,9 +18,7 @@ class SolarServerTest:
         self.driver.get(url)
         assert "dropdown" in self.driver.title
         print time.time()
-        #elem = driver.find_element_by_id("yesterday")
-        #cookieMonster = driver.get_cookies()
-
+        
         menu = self.driver.find_element_by_class_name("dropbtn")
         hidden_submenu = self.driver.find_element_by_id("submenu1")
 
@@ -33,9 +32,10 @@ class SolarServerTest:
     def test_runner(self, testLength):
         tmCurrentTime = time.time()
         tmStartTime = time.time()
-        while (True):#(tmCurrentTime - testLength < tmStartTime):
-            self.test_click()
-            self.tearDown()
+        while (tmCurrentTime - testLength < tmStartTime):
+            self.test_click("http://192.168.1.79/dropdown/dropdown_dynamic.html")
+            tmCurrentTime = time.time()
+        self.tearDown()
 
     def tearDown(self):
         self.driver.close()
@@ -43,10 +43,7 @@ class SolarServerTest:
 
 SolarServer = SolarServerTest()
 
-while (True):
-    time.sleep(1)
+time.sleep(1)
     
-
-    SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic.html")
-    SolarServer.tearDown()
+SolarServer.test_runner(5)
 

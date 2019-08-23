@@ -1,6 +1,7 @@
 #test to determine maximum sample rate of ina219 via raspberry pi
 
 import time
+import sys
 import board
 from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219, Mode
 #import datetime
@@ -22,6 +23,7 @@ ina219.mode = Mode.SVOLT_CONTINUOUS
 
 # display some of the advanced field
 # see https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py class ADCResolution for details
+print("arguments: " + sys.argv)
 print("Config register:")
 print("  bus_voltage_range:    0x%1X" % ina219.bus_voltage_range)
 print("  gain:                 0x%1X" % ina219.gain)
@@ -31,7 +33,7 @@ print("  mode:                 0x%1X" % ina219.mode)
 print("  conversion ready bit: 0x%1X" % ina219.conversion_ready)
 print("")
 
-testTime = 5.0
+testTime = sys.argv[1]
 
 #clear sample lists
 testResults = []
