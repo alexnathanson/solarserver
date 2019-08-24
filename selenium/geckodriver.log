@@ -1,230 +1,284 @@
-1566593608278	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ALEXNA~1\\AppData\\Local\\Temp\\rust_mozprofile.kgXtKXQwEujx"
-1566593609119	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1566593609119	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1566593609120	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1566593609120	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1566593612688	Marionette	INFO	Listening on port 63210
-1566593613113	Marionette	WARN	TLS certificate errors will be ignored for this session
-1566593613456	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599340629	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ALEXNA~1\\AppData\\Local\\Temp\\rust_mozprofile.Cz7crbSH5OV3"
+1566599341405	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566599341405	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566599341405	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566599341406	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566599345166	Marionette	INFO	Listening on port 49496
+1566599345454	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566599345684	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593613715	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599345942	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593613971	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346196	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593613976	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346203	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593614043	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346293	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593614309	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346544	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593614574	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346802	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593614577	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346807	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593614634	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599346885	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593614882	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599347138	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615135	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599347392	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615138	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599347395	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615232	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599347499	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615485	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599347749	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615735	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348001	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615737	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348004	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593615889	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348073	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616156	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348327	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616406	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348579	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616408	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348582	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616466	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348658	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616715	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599348911	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616968	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349179	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593616970	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349182	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593617020	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349247	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593617287	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349496	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593617554	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349749	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593617556	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349752	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593617606	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599349825	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593617856	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350075	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618122	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350328	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618124	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350331	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618197	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350397	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618446	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350652	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618708	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350905	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618712	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599350907	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593618764	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+JavaScript error: resource://devtools/client/jsonview/converter-observer.js, line 91: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannel.contentType]
+1566599351055	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619013	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599351306	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619266	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599351570	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619269	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599351572	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619322	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599351639	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619575	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599351891	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619842	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352146	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619846	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352151	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593619899	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352224	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620162	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352476	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620414	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352727	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620418	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352730	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620465	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599352808	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620713	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353058	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620964	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353325	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593620966	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353328	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593621016	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353412	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593621265	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353666	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593621533	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353918	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593621535	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353920	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593621585	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599353993	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593621837	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599354243	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622101	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599354509	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622103	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599354511	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622153	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599354595	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622417	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599354848	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622682	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355103	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622683	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355106	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622731	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355262	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593622995	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355514	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623250	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355781	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623253	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355783	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623305	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599355844	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623572	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356097	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623822	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356355	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623826	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356358	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593623877	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356442	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624142	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356694	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624408	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356947	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624411	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599356950	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624460	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599357019	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624710	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599357271	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624961	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599357527	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593624963	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599357533	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593625013	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599357609	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593625264	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599357862	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593625526	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358115	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593625528	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358117	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593625577	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358184	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593625826	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358432	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626093	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358685	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626095	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358688	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626146	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599358752	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626411	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359003	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626679	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359254	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626681	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359257	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626731	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359334	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593626996	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359585	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627249	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359839	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627252	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359841	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627310	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599359921	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627560	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599360177	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627812	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599360436	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627814	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599360439	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593627869	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599360526	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628122	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599360779	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628374	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361032	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628377	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361036	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628427	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361121	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628691	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361372	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628958	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361626	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593628960	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361632	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593629011	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361706	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
-1566593629275	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+1566599361956	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:223:64
+1566599362206	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599362208	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599362271	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599362524	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599362779	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599362781	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599362850	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363101	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363356	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363359	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363420	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363670	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363923	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363925	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599363984	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599364236	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599364492	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599364497	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599364567	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599364822	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365078	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365080	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365171	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365428	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365696	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365698	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:223:64
+1566599365704	Marionette	INFO	Stopped listening on port 49496
 console.error: BroadcastService: 
   receivedBroadcastMessage: handler for
   remote-settings/monitor_changes
@@ -233,75 +287,25 @@ console.error: BroadcastService:
   Stack:
     remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:201:13
 
-1566593629525	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593629527	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593629572	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593629821	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630072	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630074	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630125	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630373	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630636	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630639	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630686	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593630935	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631190	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631192	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631246	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631498	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631752	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631755	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593631814	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632064	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632330	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632333	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632384	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632650	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632913	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632915	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593632963	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593633216	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593633465	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593633467	Marionette	WARN	TimedPromise timed out after 0 ms: stacktrace:
-bail@chrome://marionette/content/sync.js:223:64
-1566593633476	Marionette	INFO	Stopped listening on port 63210
-[Parent 3408, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 15184, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 1518[Parent 3408, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 13156, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 13156, Chrome_Chi[Parent 3408, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 7724, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 7724, 
+[Parent 11984, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/commo[Child 10952, n/ipc_channel_win.cc, line 341
+[Child 1536[Parent 11984, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5364, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5364, Chrome_Ch[GPU 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1103[GPU 14780,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ Error: Channel closing: too late to send/recv, messages will be lost
 
 [GPU 511
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
