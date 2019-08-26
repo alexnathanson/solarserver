@@ -54,7 +54,7 @@ class SolarServerTest:
 
         self.driver.get(url)
 
-        assert "dropdown" in self.driver.title
+        #assert "dropdown" in self.driver.title
         
     '''
     def test_click_static(self, url):
@@ -105,15 +105,17 @@ dataDF = dataDF.append({'task' : 'stop idle', 'time': time.time()},ignore_index=
 time.sleep(60)
 
 print("one load browser test - blank html page")
-dataDF = dataDF.append({'task' : 'start idle', 'time': time.time()},ignore_index=True)
+dataDF = dataDF.append({'task' : 'start single load', 'time': time.time()},ignore_index=True)
 SolarServer = SolarServerTest()
+dataDF = dataDF.append({'task' : 'load' , 'time': time.time()},ignore_index=True)
+SolarServer.test_singleload("http://192.168.1.79/dropdown/blank.html")
 time.sleep(20)
 SolarServer.tearDown()
-dataDF = dataDF.append({'task' : 'stop idle', 'time': time.time()},ignore_index=True)
+dataDF = dataDF.append({'task' : 'stop single load', 'time': time.time()},ignore_index=True)
 
 time.sleep(60)
 
-print("one load browser test")
+print("one load browser test - large image")
 dataDF = dataDF.append({'task' : 'start single load', 'time': time.time()},ignore_index=True)
 SolarServer = SolarServerTest()
 dataDF = dataDF.append({'task' : 'load' , 'time': time.time()},ignore_index=True)
@@ -125,7 +127,7 @@ dataDF = dataDF.append({'task' : 'stop single load', 'time': time.time()},ignore
 time.sleep(60)
 
 
-print("one load browser test")
+print("one load browser test - small image")
 dataDF = dataDF.append({'task' : 'start single load', 'time': time.time()},ignore_index=True)
 SolarServer = SolarServerTest()
 dataDF = dataDF.append({'task' : 'load' , 'time': time.time()},ignore_index=True)
