@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<bridgedata version='1'>
+	<ratings version='1'>
+		<item key='selenium-sensitivity-2019-08-25-1566768653.csv' rating='1'/>
+		<item key='ina219-2019-08-25-1566768648.csv' rating='1'/>
+		<item key='testnotes.txt' rating='1'/>
+	</ratings>
+</bridgedata>

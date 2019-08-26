@@ -1,4 +1,3 @@
-#example from https://selenium-python.readthedocs.io/getting-started.html
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains

@@ -1,0 +1,36 @@
+Goals: understand test system better, understand how sensitive the measurements are in respect to server behavior
+
+Test Structure:
+
+
+Sleep for 60 seconds
+
+
+Initiate browser driver
+sleep for 20 seconds
+Close browser
+
+
+Sleep for 60 seconds
+
+
+Initiate browser driver
+Get webpage (dropdown_dynamic_simageA.html)
+sleep for 20 seconds
+Close browser
+
+
+Sleep for 60 seconds
+
+Initiate browser driver
+Get webpage (dropdown_dynamic_limageA.html)
+sleep for 20 seconds
+Close browser
+
+
+Sleep for 60 seconds
+
+
+-----
+
+All cache options set to false

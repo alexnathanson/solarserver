@@ -1,4 +1,3 @@
-#example from https://selenium-python.readthedocs.io/getting-started.html
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -48,6 +47,15 @@ class SolarServerTest:
         actions.perform()
 
         self.driver.implicitly_wait(2)
+
+    def test_singleload(self, url):
+
+        #self.driver.implicitly_wait(10)
+
+        self.driver.get(url)
+
+        assert "dropdown" in self.driver.title
+        
     '''
     def test_click_static(self, url):
         
@@ -75,72 +83,60 @@ class SolarServerTest:
         self.driver.close()
         #self.driver.quit()
 
-fileName = 'data/selenium-'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
+fileName = 'data/selenium-sensitivity-'+str(datetime.date.today())+'-'+str(int(time.time()))+'.csv' 
 print (fileName)
 print("")
 
 dataDF = pd.DataFrame(columns=['task','time'])
 
-if (len(sys.argv) > 1):
-    testTime = float(sys.argv[1])
-else: 
-    testTime = 5 #default 5 seconds
-
 #60 seconds idle
 time.sleep(60)
 
-#open 
 
-# run the whole thing i times to account for start up weirdness
-for i in list(range(4)):
+print ("Starting system sensitivity tests")
 
-    time.sleep(30)
+print("idle browser test")
+dataDF = dataDF.append({'task' : 'start idle', 'time': time.time()},ignore_index=True)
+SolarServer = SolarServerTest()
+time.sleep(20)
+SolarServer.tearDown()
+dataDF = dataDF.append({'task' : 'stop idle', 'time': time.time()},ignore_index=True)
 
-    #Dropdown button test
-    print ("Starting large test!")
+time.sleep(60)
 
-    dataDF = dataDF.append({'task' : 'start v1 ' + str(i) , 'time': time.time()},ignore_index=True)
-    SolarServer = SolarServerTest()
+print("one load browser test - blank html page")
+dataDF = dataDF.append({'task' : 'start idle', 'time': time.time()},ignore_index=True)
+SolarServer = SolarServerTest()
+time.sleep(20)
+SolarServer.tearDown()
+dataDF = dataDF.append({'task' : 'stop idle', 'time': time.time()},ignore_index=True)
 
-    tmCurrentTime = time.time()
-    tmStartTime = time.time()
-        
-    while (tmCurrentTime - testTime < tmStartTime):
-        # this could maybe be simplified in the future...
-        dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_limageA.html")
-        tmCurrentTime = time.time()
-        dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_limageB.html")
-        tmCurrentTime = time.time()
+time.sleep(60)
 
-    SolarServer.tearDown()
-    dataDF = dataDF.append({'task' : 'stop v1 ' + str(i) , 'time': time.time()},ignore_index=True)
+print("one load browser test")
+dataDF = dataDF.append({'task' : 'start single load', 'time': time.time()},ignore_index=True)
+SolarServer = SolarServerTest()
+dataDF = dataDF.append({'task' : 'load' , 'time': time.time()},ignore_index=True)
+SolarServer.test_singleload("http://192.168.1.79/dropdown/dropdown_dynamic_limageA.html")
+time.sleep(20)
+SolarServer.tearDown()
+dataDF = dataDF.append({'task' : 'stop single load', 'time': time.time()},ignore_index=True)
 
-    #chill out between tests
-    time.sleep(30)
+time.sleep(60)
 
-    # Static button test
 
-    print ("Starting small test!")
+print("one load browser test")
+dataDF = dataDF.append({'task' : 'start single load', 'time': time.time()},ignore_index=True)
+SolarServer = SolarServerTest()
+dataDF = dataDF.append({'task' : 'load' , 'time': time.time()},ignore_index=True)
+SolarServer.test_singleload("http://192.168.1.79/dropdown/dropdown_dynamic_simageA.html")
+time.sleep(20)
+SolarServer.tearDown()
+dataDF = dataDF.append({'task' : 'stop single load', 'time': time.time()},ignore_index=True)
 
-    dataDF = dataDF.append({'task' : 'start v2 '+ str(i), 'time': time.time()},ignore_index=True)
-    SolarServer = SolarServerTest()
+time.sleep(60)
 
-    tmCurrentTime = time.time()
-    tmStartTime = time.time()
-        
-    while (tmCurrentTime - testTime < tmStartTime):
-        dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_simageA.html")
-        tmCurrentTime = time.time()
-        dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_simageB.html")
-        tmCurrentTime = time.time()
-
-    SolarServer.tearDown()
-    dataDF = dataDF.append({'task' : 'stop v2 '+ str(i) , 'time': time.time()},ignore_index=True)
-
+   
 #save data to file
 # check if the file already exists
 try:

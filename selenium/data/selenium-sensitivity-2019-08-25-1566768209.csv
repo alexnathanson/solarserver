@@ -1,0 +1,6 @@
+task,time
+start idle,1566768209.031
+stop idle,1566768241.929
+start single load,1566768241.931
+click,1566768249.365
+stop single load,1566768272.844
