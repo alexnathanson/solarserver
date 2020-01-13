@@ -4,4 +4,4 @@ ipaddresses_homenetwork.txt
 
 *.sublime-project
 *.sublime-workspace
-*.png
+#*.png
