@@ -18,7 +18,7 @@ See https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-ci
 * Pi SCL to sensor Scl
 * Pi SDA to sensor Sda
 
-Wire the USB- together and connect to GND of Pi
+Wire the USB- together and connect to GND of Pi<br>
 Connect the USB+ to the Vin+ and Vin- pins
 
 Installing CircuitPython Libraries on Raspberry Pi
