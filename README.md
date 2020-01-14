@@ -31,6 +31,9 @@ If the power meter Pi and the server Pi are plugged in to the same circuit, they
 
 Library API info: https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py
 
+## Running tests with Selenium 
+https://selenium.dev/downloads/
+
 ## Test Steps
 ### 1) initiate the server if its not already running
 ### 2) initiate the power meter

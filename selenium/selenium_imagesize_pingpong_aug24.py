@@ -9,6 +9,8 @@ import pandas as pd
 import csv
 import sys
 
+SERVER_IP = "172.22.32.146"
+
 class SolarServerTest:
     
     def __init__(self):
@@ -108,10 +110,10 @@ for i in list(range(4)):
     while (tmCurrentTime - testTime < tmStartTime):
         # this could maybe be simplified in the future...
         dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_limageA.html")
+        SolarServer.test_click("http://" + SERVER_IP + "/dropdown/dropdown_dynamic_limageA.html")
         tmCurrentTime = time.time()
         dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_limageB.html")
+        SolarServer.test_click("http://" + SERVER_IP + "/dropdown/dropdown_dynamic_limageB.html")
         tmCurrentTime = time.time()
 
     SolarServer.tearDown()
@@ -132,10 +134,10 @@ for i in list(range(4)):
         
     while (tmCurrentTime - testTime < tmStartTime):
         dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_simageA.html")
+        SolarServer.test_click("http://" + SERVER_IP + "/dropdown/dropdown_dynamic_simageA.html")
         tmCurrentTime = time.time()
         dataDF = dataDF.append({'task' : 'click' , 'time': time.time()},ignore_index=True)
-        SolarServer.test_click("http://192.168.1.79/dropdown/dropdown_dynamic_simageB.html")
+        SolarServer.test_click("http://" + SERVER_IP + "/dropdown/dropdown_dynamic_simageB.html")
         tmCurrentTime = time.time()
 
     SolarServer.tearDown()
