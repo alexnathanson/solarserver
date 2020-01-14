@@ -6,7 +6,8 @@ sudo apt-get install php -y<br>
 No need to setup the wordpress stuff, unless you plan on making a wordpress site.
 https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress/9
 
-After cloning this repo move the index.php file up one directory.
+To run tests, move the dropdown directory into /var/www/html<br>
+To run the data collection web page move the index.php file into /var/www/html
 
 ## getting solar data via the charge controller data power
 See https://www.github.com/alexnathanson/EPSolar_Tracer
@@ -34,7 +35,9 @@ If the power meter Pi and the server Pi are plugged in to the same circuit, they
 Library API info: https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob/master/adafruit_ina219.py
 
 ## Running tests with Selenium 
-https://selenium.dev/downloads/
+https://selenium.dev/downloads/<br>
+pip install pandas
+pip install selenium
 
 ## Test Steps
 ### 1) initiate the server if its not already running
