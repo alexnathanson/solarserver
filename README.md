@@ -48,5 +48,5 @@ pip install selenium
 * if runtime isn't specified, default runtime is 5 seconds
 
 ### 4) pscp the data from the power meter
-pscp pi@[POWER METER IP]:solarserver/ina219/data/[FILE NAME] c:\Users\[USER]\Documents\solarserver\aggregator\[TEST RESULTS DIRECTORY]
+pscp pi@POWER_METER_IP:solarserver/ina219/data/FILE_NAME c:\FULL_TEST_RESULTS_DIRECTORY_PATH
 ### 5) bring data into jupyter notebook
