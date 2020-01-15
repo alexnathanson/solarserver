@@ -41,12 +41,15 @@ pip install selenium
 ## Test Steps
 ### 1) initiate the server if its not already running
 ### 2) initiate the power meter
-* must use python3 -> python3 [script name] [runtime in seconds]
+* must use python3 -> python3 ina219_datarecorder_aug22.py [runtime in seconds]
 * runtime should be at least 4X the test runtime + 2x60 seconds sleep time between test + 15 seconds at the beginning and end for good measure -> ((testruntime * 2) + 150)
+
 ### 3) immediately initiate the selenium test
-* python [script name] [runtime in seconds]
+* python selenium_imagesize_pingpong_aug24.py [runtime in seconds]
 * if runtime isn't specified, default runtime is 5 seconds
 
-### 4) pscp the data from the power meter
+### 4) pscp the data from the power meter to aggregator
 pscp pi@POWER_METER_IP:solarserver/ina219/data/FILE_NAME c:\FULL_TEST_RESULTS_DIRECTORY_PATH
+
 ### 5) bring data into jupyter notebook
+run aggregator_aug23.ipynb
