@@ -15,7 +15,6 @@ See https://www.github.com/alexnathanson/EPSolar_Tracer
 ## getting server power consumption data via external Raspberry Pi + INA219
 See https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/python-circuitpython for detailed wiring instructions and code
 
-
 * Pi 3V3 to sensor Vcc
 * Pi GND to sensor Gnd
 * Pi SCL to sensor Scl
@@ -47,5 +46,7 @@ pip install selenium
 ### 3) immediately initiate the selenium test
 * python [script name] [runtime in seconds]
 * if runtime isn't specified, default runtime is 5 seconds
+
 ### 4) pscp the data from the power meter
+pscp pi@[POWER METER IP]:solarserver/ina219/data/[FILE NAME] c:\Users\[USER]\Documents\solarserver\aggregator\[TEST RESULTS DIRECTORY]
 ### 5) bring data into jupyter notebook

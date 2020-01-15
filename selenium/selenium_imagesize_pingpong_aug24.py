@@ -9,7 +9,7 @@ import pandas as pd
 import csv
 import sys
 
-SERVER_IP = "172.22.32.146"
+SERVER_IP = "192.168.1.206"
 
 class SolarServerTest:
     
@@ -88,17 +88,20 @@ if (len(sys.argv) > 1):
 else: 
     testTime = 5 #default 5 seconds
 
+bookendSleepTime = 60
+middleSleepTime = 30
+
 #60 seconds idle
-time.sleep(60)
+time.sleep(bookendSleepTime)
 
 #open 
 
 # run the whole thing i times to account for start up weirdness
 for i in list(range(4)):
 
-    time.sleep(30)
+    time.sleep(middleSleepTime)
 
-    #Dropdown button test
+    #Phase 1
     print ("Starting large test!")
 
     dataDF = dataDF.append({'task' : 'start v1 ' + str(i) , 'time': time.time()},ignore_index=True)
@@ -120,9 +123,9 @@ for i in list(range(4)):
     dataDF = dataDF.append({'task' : 'stop v1 ' + str(i) , 'time': time.time()},ignore_index=True)
 
     #chill out between tests
-    time.sleep(30)
+    time.sleep(middleSleepTime)
 
-    # Static button test
+    # Phase 2
 
     print ("Starting small test!")
 
