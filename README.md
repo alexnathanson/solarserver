@@ -36,7 +36,7 @@ Library API info: https://github.com/adafruit/Adafruit_CircuitPython_INA219/blob
 
 ## Running tests with Selenium 
 https://selenium.dev/downloads/<br>
-pip install pandas
+pip install pandas<br>
 pip install selenium
 
 ## Test Steps
